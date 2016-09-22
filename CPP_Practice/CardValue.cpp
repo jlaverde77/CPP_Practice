@@ -54,7 +54,7 @@ CardValue::CardValue(int value)
 	numValue = setNumValue(myValue);
 }
 
-CardValue::CardValue(string value)
+CardValue::CardValue(std::string value)
 {
 	if (value == "2") myValue = Two;
 	else if (value == "3") myValue = Three;
@@ -85,22 +85,46 @@ CardValue::CardValue(FaceValue value)
 
 int CardValue::setNumValue(FaceValue val){
 	if (val == Two) return 2;
-	if (val == Three) return 3;
-	if (val == Four) return 4;
-	if (val == Five) return 5;
-	if (val == Six) return 6;
-	if (val == Seven) return 7;
-	if (val == Eight) return 8;
-	if (val == Nine) return 9;
-	if (val == Ten) return 10;
-	if (val == Jack) return 11;
-	if (val == Queen) return 12;
-	if (val == King) return 13;
+	else if (val == Three) return 3;
+	else if (val == Four) return 4;
+	else if (val == Five) return 5;
+	else if (val == Six) return 6;
+	else if (val == Seven) return 7;
+	else if (val == Eight) return 8;
+	else if (val == Nine) return 9;
+	else if (val == Ten) return 10;
+	else if (val == Jack) return 11;
+	else if (val == Queen) return 12;
+	else if (val == King) return 13;
 	else return 14;
+}
+
+std::string CardValue::getStringValue(){
+	if (myValue == Two) return "2";
+	else if (myValue == Three) return "3";
+	else if (myValue == Four) return "4";
+	else if (myValue == Five) return "5";
+	else if (myValue == Six) return "6";
+	else if (myValue == Seven) return "7";
+	else if (myValue == Eight) return "8";
+	else if (myValue == Nine) return "9";
+	else if (myValue == Ten) return "10";
+	else if (myValue == Jack) return "J";
+	else if (myValue == Queen) return "Q";
+	else if (myValue == King) return "K";
+	else if (myValue == Ace) return "A";
+	else if (myValue == JokerSmall) return "S";
+	else if (myValue == JokerBig) return "B";
+	else return "E";
+	
 }
 
 int CardValue::getNumValue(){
 	return numValue;
+}
+
+CardValue::FaceValue CardValue::getFaceValue(){
+	return myValue;
 }
 
 CardValue::~CardValue()

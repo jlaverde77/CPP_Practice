@@ -27,7 +27,9 @@ void Card::FlipCard(){
 	isShown = !isShown;
 }
 
-
+string Card::ReadCard(){
+	return "" + mySuit->getShortValue() + myCardValue->getStringValue();
+}
 
 Card::~Card()
 {

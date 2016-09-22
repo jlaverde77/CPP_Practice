@@ -8,6 +8,9 @@ Suit::Suit(SuitType suit)
 Suit::Suit(int suit)
 {
 	switch(suit){
+	case 0:
+		mySuit = Joker;
+		break;
 	case 1:
 		mySuit = Hearts;
 		break;
@@ -44,26 +47,26 @@ string Suit::getStringValue(){
 	}
 }
 
-char Suit::getCharValue(){
+string Suit::getShortValue(){
 
 	switch (mySuit){
 	case 0:
-		return 'J';
+		return "J";
 		break;
 	case 1:
-		return 'H';
+		return "H";
 		break;
 	case 2:
-		return 'C';
+		return "C";
 		break;
 	case 3:
-		return 'D';
+		return "D";
 		break;
 	case 4:
-		return 'S';
+		return "S";
 		break;
 	default:
-		return 'E';
+		return "E";
 	}
 }
 

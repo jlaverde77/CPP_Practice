@@ -13,7 +13,7 @@ public:
 	~Suit();
 
 	string getStringValue();
-	char getCharValue();
+	string getShortValue();
 
 	
 private:
