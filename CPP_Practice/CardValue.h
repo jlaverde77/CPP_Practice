@@ -6,6 +6,7 @@ class CardValue
 {
 public:
 	enum FaceValue{JokerSmall, JokerBig, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten, Jack, Queen, King, Ace};
+	
 	CardValue(int);
 	CardValue(string);
 	CardValue(FaceValue);

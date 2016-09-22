@@ -76,6 +76,13 @@ CardValue::CardValue(string value)
 	
 }
 
+CardValue::CardValue(FaceValue value)
+{
+	myValue = value;
+	numValue = setNumValue(myValue);
+
+}
+
 int CardValue::setNumValue(FaceValue val){
 	if (val == Two) return 2;
 	if (val == Three) return 3;

@@ -1,6 +1,8 @@
 #pragma once
 #include <string>
 
+using namespace std;
+
 class Suit
 {
 public:
@@ -8,8 +10,12 @@ public:
 
 	Suit(SuitType);
 	Suit(int);
-	
 	~Suit();
+
+	string getStringValue();
+	char getCharValue();
+
+	
 private:
 	SuitType mySuit;
 	
