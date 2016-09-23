@@ -5,6 +5,12 @@ Card::Card(int suit, int value){
 	myCardValue = new CardValue(value);
 }
 
+Card::Card(int suit, int value, int deckNum){
+	mySuit = new Suit(suit);
+	myCardValue = new CardValue(value);
+	origOrder = deckNum;
+}
+
 Card::Card(int suit, string value){
 	mySuit = new Suit(suit);
 	myCardValue = new CardValue(value);
@@ -29,6 +35,10 @@ void Card::FlipCard(){
 
 string Card::ReadCard(){
 	return "" + mySuit->getShortValue() + myCardValue->getStringValue();
+}
+
+void Card::SetOriginalOrder(int o){
+	origOrder = o;
 }
 
 Card::~Card()
